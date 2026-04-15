@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalogue | SK Sports Shop</title>
+    
+    <meta name="description" content="Browse our extensive collection of professional sports gear at SK Sports. From Cricket to Gym, find what you need.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            margin-bottom: 4rem;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1.75rem;
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 40px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent-color);
+            color: #000;
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">SK<span style="color:white"> SPORTS</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link active">Products</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="py">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h1>Our Collection</h1>
+                    <p>High-performance gear for every athlete. Quality guaranteed.</p>
+                </div>
+
+                <div class="filter-container fade-in">
+                    <button class="filter-btn active" data-filter="all">All Gear</button>
+                    <button class="filter-btn" data-filter="cricket">Cricket</button>
+                    <button class="filter-btn" data-filter="football">Football</button>
+                    <button class="filter-btn" data-filter="gym">Gym & Fitness</button>
+                    <button class="filter-btn" data-filter="shoes">Footwear</button>
+                    <button class="filter-btn" data-filter="kids">Kids Sports</button>
+                    <button class="filter-btn" data-filter="accessories">Accessories</button>
+                </div>
+
+                <div class="product-grid" id="productGrid">
+                    <!-- Cricket Products -->
+                    <div class="product-card fade-in" data-category="cricket">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=600" alt="Cricket Bat">
+                        <div class="product-details">
+                            <h3>Grade 1 English Willow Bat</h3>
+                            <p>Handcrafted for explosive power and perfect balance.</p>
+                            <span class="price">₹18,500</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="cricket">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d?auto=format&fit=crop&q=80&w=600" alt="Cricket helmet">
+                        <div class="product-details">
+                            <h3>Pro Guard Helmet</h3>
+                            <p>Advanced protection with high-impact resistance.</p>
+                            <span class="price">₹4,200</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="cricket">
+                        <div class="badge">New</div>
+                        <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=600" alt="Leather Cricket Ball">
+                        <div class="product-details">
+                            <h3>Pro Leather Ball</h3>
+                            <p>Hand-stitched genuine leather for swinging conditions.</p>
+                            <span class="price">₹1,800</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="cricket">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d?auto=format&fit=crop&q=80&w=600" alt="Cricket Pads">
+                        <div class="product-details">
+                            <h3>Elite Batting Pads</h3>
+                            <p>Lightweight high-density foam for ultimate protection.</p>
+                            <span class="price">₹6,500</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="cricket">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1607734834519-d8576ae60ea6?auto=format&fit=crop&q=80&w=600" alt="Cricket Stumps">
+                        <div class="product-details">
+                            <h3>Premium Ash Stumps</h3>
+                            <p>Regulation size ash wood stumps with bails.</p>
+                            <span class="price">₹2,800</span>
+                        </div>
+                    </div>
+
+                    <!-- Football Products -->
+                    <div class="product-card fade-in" data-category="football">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=600" alt="Football">
+                        <div class="product-details">
+                            <h3>Competition Match Ball</h3>
+                            <p>FIFA Quality Pro certified for consistent flight.</p>
+                            <span class="price">₹3,200</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="football">
+                        <div class="badge">Trending</div>
+                        <img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&q=80&w=600" alt="Goalkeeper Gloves">
+                        <div class="product-details">
+                            <h3>Pro Grip GK Gloves</h3>
+                            <p>Latex foam palm for unmatched grip in all conditions.</p>
+                            <span class="price">₹4,800</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="football">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&q=80&w=600" alt="Training Cones">
+                        <div class="product-details">
+                            <h3>Agility Training Cones</h3>
+                            <p>Set of 50 high-visibility cones with carry stand.</p>
+                            <span class="price">₹1,200</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="football">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&q=80&w=600" alt="Agility Ladder">
+                        <div class="product-details">
+                            <h3>Speed & Agility Ladder</h3>
+                            <p>15-foot ladder for footwork and coordination training.</p>
+                            <span class="price">₹1,600</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="football">
+                        <div class="badge">Sale</div>
+                        <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&q=80&w=600" alt="Goal Net">
+                        <div class="product-details">
+                            <h3>Regulation Goal Net</h3>
+                            <p>Heavy-duty replacement net for full-size goals.</p>
+                            <span class="price">₹5,500</span>
+                        </div>
+                    </div>
+
+                    <!-- Gym & Fitness Products -->
+                    <div class="product-card fade-in" data-category="gym">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=600" alt="Dumbbells">
+                        <div class="product-details">
+                            <h3>Elite Adjustable Dumbbells</h3>
+                            <p>Versatile weight range for complete home workouts.</p>
+                            <span class="price">₹12,000</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="gym">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=600" alt="Olympic bar">
+                        <div class="product-details">
+                            <h3>Olympic Weight Bar</h3>
+                            <p>Professional grade steel with precision knurling.</p>
+                            <span class="price">₹15,000</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="gym">
+                        <div class="badge">Popular</div>
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=600" alt="Kettlebell">
+                        <div class="product-details">
+                            <h3>Cast Iron Kettlebell</h3>
+                            <p>Durable solid iron construction for dynamic workouts.</p>
+                            <span class="price">₹4,200</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="gym">
+                        <div class="badge">New</div>
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=600" alt="Yoga Mat">
+                        <div class="product-details">
+                            <h3>Premium Yoga Mat</h3>
+                            <p>Eco-friendly, non-slip surface with alignment lines.</p>
+                            <span class="price">₹1,500</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="gym">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&q=80&w=600" alt="Resistance Bands">
+                        <div class="product-details">
+                            <h3>Pro Resistance Bands Set</h3>
+                            <p>5 varying resistance levels with handles and door anchor.</p>
+                            <span class="price">₹1,200</span>
+                        </div>
+                    </div>
+
+                    <!-- Footwear Products -->
+                    <div class="product-card fade-in" data-category="shoes">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=600" alt="Running Shoe">
+                        <div class="product-details">
+                            <h3>Apex Running Shoes</h3>
+                            <p>Ultralight cushioning for maximum distance.</p>
+                            <span class="price">₹8,500</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="shoes">
+                        <div class="badge">Trending</div>
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=600" alt="Football Cleats">
+                        <div class="product-details">
+                            <h3>Pro Football Cleats</h3>
+                            <p>Aggressive stud pattern for superior traction on grass.</p>
+                            <span class="price">₹9,500</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="shoes">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&q=80&w=600" alt="Basketball Shoes">
+                        <div class="product-details">
+                            <h3>Court Master Sneakers</h3>
+                            <p>Ankle support and responsive cushioning for the court.</p>
+                            <span class="price">₹7,800</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="shoes">
+                        <div class="badge">Sale</div>
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600" alt="Training Shoes">
+                        <div class="product-details">
+                            <h3>Weightlifting Trainers</h3>
+                            <p>Flat sole and elevated heel for stable heavy lifts.</p>
+                            <span class="price">₹6,500</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="shoes">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&q=80&w=600" alt="Tennis Shoes">
+                        <div class="product-details">
+                            <h3>Pro Tennis Shoes</h3>
+                            <p>Durable outsole built for hard court slides.</p>
+                            <span class="price">₹7,200</span>
+                        </div>
+                    </div>
+
+                    <!-- Kids Sports Products -->
+                    <div class="product-card fade-in" data-category="kids">
+                        <div class="badge">New</div>
+                        <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&q=80&w=600" alt="Kids Tennis Racket">
+                        <div class="product-details">
+                            <h3>Junior Tennis Racket</h3>
+                            <p>Lightweight alloy frame perfect for beginners.</p>
+                            <span class="price">₹2,800</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="kids">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1553775282-20af80779df7?auto=format&fit=crop&q=80&w=600" alt="Kids Football">
+                        <div class="product-details">
+                            <h3>Youth Training Football</h3>
+                            <p>Size 4 ball designed specifically for youth play.</p>
+                            <span class="price">₹1,200</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="kids">
+                        <div class="badge">Popular</div>
+                        <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=600" alt="Kids Boxing Gloves">
+                        <div class="product-details">
+                            <h3>Youth Boxing Gloves</h3>
+                            <p>Extra padding and secure strap for small hands.</p>
+                            <span class="price">₹2,200</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="kids">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&q=80&w=600" alt="Mini Basketball Hoop">
+                        <div class="product-details">
+                            <h3>Over-door Basketball Hoop</h3>
+                            <p>Shatterproof backboard for indoor practice.</p>
+                            <span class="price">₹2,500</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="kids">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1553775282-20af80779df7?auto=format&fit=crop&q=80&w=600" alt="Swim Goggles">
+                        <div class="product-details">
+                            <h3>Kids Swim Goggles</h3>
+                            <p>Anti-fog lenses with comfortable silicone seal.</p>
+                            <span class="price">₹850</span>
+                        </div>
+                    </div>
+
+                    <!-- Accessories Products -->
+                    <div class="product-card fade-in" data-category="accessories">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=600" alt="Water Bottle">
+                        <div class="product-details">
+                            <h3>Insulated Water Bottle</h3>
+                            <p>Keeps drinks cold for 24 hours. BPA-free steel.</p>
+                            <span class="price">₹1,200</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="accessories">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1522845015757-50bce044e5da?auto=format&fit=crop&q=80&w=600" alt="Sweatbands">
+                        <div class="product-details">
+                            <h3>Cotton Sweatband Set</h3>
+                            <p>Includes headband and two wristbands. Highly absorbent.</p>
+                            <span class="price">₹650</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="accessories">
+                        <div class="badge">Popular</div>
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600" alt="Duffel Bag">
+                        <div class="product-details">
+                            <h3>Pro Gym Duffel Bag</h3>
+                            <p>Spacious main compartment with vented shoe pocket.</p>
+                            <span class="price">₹3,200</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="accessories">
+                        <div class="badge">Trending</div>
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600" alt="Fitness Tracker">
+                        <div class="product-details">
+                            <h3>Smart Fitness Tracker</h3>
+                            <p>Heart rate, sleep tracking, and step counter.</p>
+                            <span class="price">₹5,500</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" data-category="accessories">
+                        <div class="badge">In Store</div>
+                        <img src="https://images.unsplash.com/photo-1598211686290-a8ef209d87c5?auto=format&fit=crop&q=80&w=600" alt="Jump Rope">
+                        <div class="product-details">
+                            <h3>Speed Jump Rope</h3>
+                            <p>Ball-bearing handles and adjustable steel cable.</p>
+                            <span class="price">₹950</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo footer-logo">SK<span style="color:white"> SPORTS</span></div>
+                    <p>Leveling up athletes since 2010. Your destination for premium gear setup right here in Chennai.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Catalogue</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <p>+91 98765 43210</p>
+                    <p>contact@sksports.in</p>
+                    <p>Anna Nagar, Chennai</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SK Sports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Local filtering logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const products = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                products.forEach(product => {
+                    if (filter === 'all' || product.getAttribute('data-category') === filter) {
+                        product.style.display = 'block';
+                        product.classList.add('appear');
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // URL parameter support
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('cat');
+        if (cat) {
+            const target = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+            if (target) target.click();
+        }
+    </script>
+</body>
+</html>
